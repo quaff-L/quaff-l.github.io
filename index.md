@@ -12,4 +12,4 @@ tags:
 
 
 ### 近期更新
-[Markdown语法](/语言类/标记类语言/Markdown/)
+[Markdown语法](/Progs/Markups/Markdown/)
