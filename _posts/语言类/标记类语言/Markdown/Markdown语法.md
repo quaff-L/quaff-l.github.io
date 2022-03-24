@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Markdown语法"
-permalink: /_post/语言类/标记类语言/Markdown/_
+permalink: /语言类/标记类语言/Markdown/_
 ---
 
 # Markdown语法
