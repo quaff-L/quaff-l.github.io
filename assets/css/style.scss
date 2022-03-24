@@ -1,7 +1,9 @@
 ---
 ---
 
-@import 'pink';
+@import "{{ site.theme }}";
+
+// @import 'jekyll-theme-hacker';
 
 
 $apple-blossom: #ac4142; //棕红
