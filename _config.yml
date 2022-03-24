@@ -8,6 +8,9 @@ webrick:
     My-Header: My-Value
     My-Other-Header: My-Other-Value
 
+comments:
+  provider: disqus
+
 # title: Hacker theme
 # description: Hacker is a theme for GitHub Pages.
 # show_downloads: true
