@@ -9,4 +9,4 @@ categories: jekyll update
 # 我的博客
 
 ### 近期更新
-[Markdown语法](/语言类/标记类语言/Markdown/Markdown语法.html)
+[Markdown语法](/语言类/标记类语言/Markdown/)
