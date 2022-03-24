@@ -1,9 +1,13 @@
 ---
-layout: default
-#layout: post
-title:  "Welcome to Jekyll!"
+# layout: default
+layout: post
+title:  "我的博客"
+subtitle: ""
+author: "quaff"
 date:   2014-01-27 21:57:11
 categories: jekyll update
+tags:
+    - blog
 ---
 
 # 我的博客
