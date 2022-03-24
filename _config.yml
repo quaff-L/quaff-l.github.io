@@ -1,8 +1,8 @@
 
 webrick:
   headers:
-    My-Header: My-Value
-    My-Other-Header: My-Other-Value
+    My-Header: "header"
+    My-Other-Header: "My-Other-Value"
 
 paginate: 5
 
@@ -12,6 +12,5 @@ gems: [jekyll-paginate]
 # description: Hacker is a theme for GitHub Pages.
 # show_downloads: true
 # google_analytics:
-# theme: jekyll-theme-hacker
 
 theme: jekyll-theme-hacker
