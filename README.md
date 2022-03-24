@@ -1,10 +1,34 @@
 # The Hacker theme
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/hacker/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/hacker/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-hacker.svg)](https://badge.fury.io/rb/jekyll-theme-hacker)
+*Hacker is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/hacker).*
 
-*Hacker is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/hacker), or even [use it today](#usage).*
+## Jekyll 项目结构
 
-![Thumbnail of Hacker](thumbnail.png)
+一个较简单的 Jekyll 项目的文件结构如下：
+
+```text
+.
+├── _config.yml  配置文件
+├── _posts
+│   └── 2020-03-14-jekyll-behind-github-pages.md  格式为/_posts/YYYY-mm-dd-title.md
+├── about.md
+├── readme.md
+├── _layouts  /_layouts/ 里是 layout 模板。markdown 文件的内容会嵌入到以下 layout中作为最终的网页：
+│   ├── default.html
+│   ├── post.html
+│   └── page.html
+└── _includes   layout 中抽取出的公共部分，在 layout 中通过如 {%include footer.html %} 引入
+    ├── footer.html
+    └── header.html
+```
+
+
+
+> 索引页：任一目录中都会依次查找使用 `index.md` 或 `readme.md` 用以生成 `index.html`。比如 `/foo/readme.md` 对应网页的路径为 `/foo/index.html`，甚至访问 `/foo` 也可以
+>
+> 其它页：如 `about.md`。Github Pages 会将所有非下划线开头的路径中的 markdown 文件转为对应名字的网页。
+>
+> 网页模板：使用 [Liquid](https://link.zhihu.com/?target=https%3A//shopify.github.io/liquid/) 编写的模板文件（就是带 {`% if true %`} {`{ var | filter }`} {`% endif %`} 一类标记的 html 或 markdown）
 
 ## Usage
 
@@ -51,7 +75,7 @@ If you'd like to add your own custom styles:
     ```scss
     ---
     ---
-
+    
     @import "{{ site.theme }}";
     ```
 3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
@@ -71,46 +95,3 @@ If you'd like to change the theme's HTML layout:
 ### Customizing Google Analytics code
 
 Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
-
-### Overriding GitHub-generated URLs
-
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
-
-1. Look at [the template source](https://github.com/pages-themes/hacker/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
-
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
-
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
-
-## Roadmap
-
-See the [open issues](https://github.com/pages-themes/hacker/issues) for a list of proposed features (and known issues).
-
-## Project philosophy
-
-The Hacker theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
-
-## Contributing
-
-Interested in contributing to Hacker? We'd love your help. Hacker is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
-
-### Previewing the theme locally
-
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
-
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/hacker`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
-
-### Running tests
-
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
