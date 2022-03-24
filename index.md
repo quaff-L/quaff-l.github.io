@@ -1,5 +1,9 @@
 ---
 layout: default
+#layout: post
+title:  "Welcome to Jekyll!"
+date:   2014-01-27 21:57:11
+categories: jekyll update
 ---
 
 # 我的博客
