@@ -2,15 +2,14 @@
 # layout: default
 layout: post
 title:  "我的博客"
-subtitle: ""
+subtitle: "从明天起，要写博客了"
 author: "quaff"
-date:   2014-01-27 21:57:11
+date:   2022-03-24
 categories: jekyll update
 tags:
     - blog
 ---
 
-# 我的博客
 
 ### 近期更新
 [Markdown语法](/语言类/标记类语言/Markdown/)
