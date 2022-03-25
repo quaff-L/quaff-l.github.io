@@ -1,12 +1,3 @@
-webrick:
-  headers:
-    My-Header: "header"
-    My-Other-Header: "My-Other-Value"
-
-paginate: 5
-
-gems: [jekyll-paginate]
-
 title: Hacker theme
 description: 这是配置文件的描述
 # show_downloads: true
