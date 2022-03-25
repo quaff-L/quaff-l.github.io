@@ -1,6 +1,6 @@
 ---
 title: "新的博客"
-decription: "vue, springboot, 微信小程序..."
+description: "vue, springboot, 微信小程序..."
 ---
 
 ### 最近更新
